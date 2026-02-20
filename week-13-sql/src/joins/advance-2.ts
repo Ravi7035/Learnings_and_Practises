@@ -8,7 +8,7 @@ async function getUserAndTodosWithJoin(userId: number) {
     const joinQuery = `
         SELECT users.*, todos.title, todos.description, todos.done
         FROM users
-        LEFT JOIN todos ON users.id = todos.user_id
+        JOIN todos ON users.id = todos.user_id
         
     `;
 
